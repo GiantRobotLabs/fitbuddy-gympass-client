@@ -221,7 +221,7 @@
     else
     {
         [venueLabel setText:@"No Location"];
-        [addressLabel setText:@""];
+        [addressLabel setText:@"Tap to make pass location aware."];
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     }
     

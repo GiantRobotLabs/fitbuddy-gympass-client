@@ -19,6 +19,7 @@
 		D62CA07F18CBA11E0066CFA6 /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D62CA07418CBA11E0066CFA6 /* pin@2x.png */; };
 		D62CA08018CBA11E0066CFA6 /* poweredByFoursquare_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = D62CA07518CBA11E0066CFA6 /* poweredByFoursquare_gray.png */; };
 		D62CA08118CBA11E0066CFA6 /* poweredByFoursquare_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D62CA07618CBA11E0066CFA6 /* poweredByFoursquare_gray@2x.png */; };
+		D6736B2518CED00600BA8AB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F4459E18CD65E700911D1E /* Main.storyboard */; };
 		D6BC795318CA6252000CEAFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC795218CA6252000CEAFB /* Foundation.framework */; };
 		D6BC795518CA6252000CEAFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC795418CA6252000CEAFB /* CoreGraphics.framework */; };
 		D6BC795718CA6252000CEAFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC795618CA6252000CEAFB /* UIKit.framework */; };
@@ -58,7 +59,7 @@
 		D62CA07418CBA11E0066CFA6 /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin@2x.png"; sourceTree = "<group>"; };
 		D62CA07518CBA11E0066CFA6 /* poweredByFoursquare_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poweredByFoursquare_gray.png; sourceTree = "<group>"; };
 		D62CA07618CBA11E0066CFA6 /* poweredByFoursquare_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poweredByFoursquare_gray@2x.png"; sourceTree = "<group>"; };
-		D6BC794F18CA6252000CEAFB /* FitBuddy Gym Pass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FitBuddy Gym Pass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6BC794F18CA6252000CEAFB /* GymPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BC795218CA6252000CEAFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D6BC795418CA6252000CEAFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D6BC795618CA6252000CEAFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -152,7 +153,7 @@
 		D6BC795018CA6252000CEAFB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6BC794F18CA6252000CEAFB /* FitBuddy Gym Pass.app */,
+				D6BC794F18CA6252000CEAFB /* GymPass.app */,
 				D6BC797018CA6252000CEAFB /* FitBuddy Gym PassTests.xctest */,
 			);
 			name = Products;
@@ -228,9 +229,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D6BC794E18CA6252000CEAFB /* FitBuddy Gym Pass */ = {
+		D6BC794E18CA6252000CEAFB /* GymPass */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6BC798118CA6252000CEAFB /* Build configuration list for PBXNativeTarget "FitBuddy Gym Pass" */;
+			buildConfigurationList = D6BC798118CA6252000CEAFB /* Build configuration list for PBXNativeTarget "GymPass" */;
 			buildPhases = (
 				D6BC794B18CA6252000CEAFB /* Sources */,
 				D6BC794C18CA6252000CEAFB /* Frameworks */,
@@ -240,9 +241,9 @@
 			);
 			dependencies = (
 			);
-			name = "FitBuddy Gym Pass";
+			name = GymPass;
 			productName = "FitBuddy Gym Pass";
-			productReference = D6BC794F18CA6252000CEAFB /* FitBuddy Gym Pass.app */;
+			productReference = D6BC794F18CA6252000CEAFB /* GymPass.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D6BC796F18CA6252000CEAFB /* FitBuddy Gym PassTests */ = {
@@ -288,7 +289,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D6BC794A18CA6252000CEAFB /* Build configuration list for PBXProject "FitBuddy-GymPass" */;
+			buildConfigurationList = D6BC794A18CA6252000CEAFB /* Build configuration list for PBXProject "GymPass" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -301,7 +302,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6BC794E18CA6252000CEAFB /* FitBuddy Gym Pass */,
+				D6BC794E18CA6252000CEAFB /* GymPass */,
 				D6BC796F18CA6252000CEAFB /* FitBuddy Gym PassTests */,
 			);
 		};
@@ -312,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6736B2518CED00600BA8AB6 /* Main.storyboard in Resources */,
 				D6F4458A18CD657600911D1E /* FitBuddyGymPassTests-Info.plist in Resources */,
 				D62CA07F18CBA11E0066CFA6 /* pin@2x.png in Resources */,
 				D62CA07D18CBA11E0066CFA6 /* FSWebLogin.xib in Resources */,
@@ -409,6 +411,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -448,6 +451,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -547,7 +551,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D6BC794A18CA6252000CEAFB /* Build configuration list for PBXProject "FitBuddy-GymPass" */ = {
+		D6BC794A18CA6252000CEAFB /* Build configuration list for PBXProject "GymPass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6BC797F18CA6252000CEAFB /* Debug */,
@@ -556,7 +560,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6BC798118CA6252000CEAFB /* Build configuration list for PBXNativeTarget "FitBuddy Gym Pass" */ = {
+		D6BC798118CA6252000CEAFB /* Build configuration list for PBXNativeTarget "GymPass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6BC798218CA6252000CEAFB /* Debug */,
