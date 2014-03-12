@@ -88,7 +88,7 @@
 
 - (IBAction)makePassButtonClicked:(id)sender
 {
-    NSLog(@"Preparing Gym Pass for: Name:%@, Id:%@, Venue:%@, Addr:%@, Lat:%@, Lon:%@",
+    if (DEBUG) NSLog(@"Preparing Gym Pass for: Name:%@, Id:%@, Venue:%@, Addr:%@, Lat:%@, Lon:%@",
           self.memberNameField.text,
           self.memberNumberField.text,
           self.locationNameField.text,
@@ -98,10 +98,7 @@
     
     if (self.memberNumberField.text && self.memberNumberField.text && self.locationNameField.text)
     {
-        NSString *service = @"https://sinatra-evilsushi.rhcloud.com/passbook";
-        NSString *name = self.memberNameField.text;
-        NSString *memberId = self.memberNumberField.text;
-        NSString *locName = self.locationNameField.text;
+        
         NSString *address = @"No address";
         NSNumber *lat = [NSNumber numberWithDouble:0.0];
         NSNumber *lon = [NSNumber numberWithDouble:0.0];
@@ -120,16 +117,41 @@
             
         }
         
-        NSString *serviceString = [NSString stringWithFormat:@"%@?memberName=%@&memberId=%@&locationName=%@&locationAddress=%@&locationLat=%@&locationLon=%@", service, name, memberId, locName, address, lat, lon];
+        NSDictionary *jsonDict = @{@"memberName": self.memberNameField.text,
+                               @"memberId": self.memberNumberField.text,
+                                   @"locations":
+                                       @[@{
+                                           @"name":self.locationNameField.text,
+                                           @"address": address,
+                                           @"latitude":lat,
+                                           @"longitude": lon
+                                       }]
+                               };
+
+        NSError *err;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:NSJSONWritingPrettyPrinted error:&err];
+        NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[jsonData length]];
         
-        NSURL *serviceURL = [NSURL URLWithString:[serviceString stringByAddingPercentEscapesUsingEncoding:
-                                                  NSASCIIStringEncoding]];
+        NSURL *service = [NSURL URLWithString: kGYMPASSAPI];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:service];
+        [request setHTTPMethod:@"POST"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+        [request setHTTPBody:jsonData];
         
+        if (! jsonData) {
+            NSLog(@"Error creating json: %@", err.localizedDescription);
+        }
+
         UIActivityIndicatorView *activityView = [self showActivityIndicatorOnView:self.view];
-        NSData *data = [NSData dataWithContentsOfURL:serviceURL];
+        
+        NSURLResponse *response;
+        NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
+        
         [activityView stopAnimating];
         
-        [self showPass:data];
+        [self showPass:responseData];
     }
     else
     {

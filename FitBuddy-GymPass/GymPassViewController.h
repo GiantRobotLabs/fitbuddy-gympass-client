@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FSVenue.h"
 
-@interface GymPassViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface GymPassViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *memberNameField;
 @property (weak, nonatomic) IBOutlet UITextField *memberNumberField;
