@@ -12,6 +12,9 @@
 #import "FoursquareConstants.h"
 #import <PassKit/PassKit.h>
 
+#import "RSCodeGen.h"
+#import "PassPreview.h"
+
 @interface GymPassViewController ()
 {
  
@@ -35,6 +38,8 @@
     [super viewDidLoad];
 	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:kFITBUDDY]];
     [self.makeAPassButton setBackgroundColor:kCOLOR_RED];
+    [self.makeAPassButton setTitleColor:kCOLOR_LTGRAY forState:UIControlStateHighlighted];
+
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
@@ -46,14 +51,13 @@
     self.memberNumberField.returnKeyType = UIReturnKeyDone;
     self.locationNameField.returnKeyType = UIReturnKeyDone;
     
+    PKPass *pass = nil;
+    
     if (![PKPassLibrary isPassLibraryAvailable]) {
-        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Pass Library Error" message:@"The Pass Library is not available." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alertView show];
+        PKPassLibrary *passLib = [[PKPassLibrary alloc] init];
+        pass = [passLib passWithPassTypeIdentifier:@"pass.com.giantrobotlabs.fitbuddy" serialNumber:@"000000001"];
     }
-    PKPassLibrary *passLib = [[PKPassLibrary alloc] init];
     
-    
-    PKPass *pass = [passLib passWithPassTypeIdentifier:@"pass.com.giantrobotlabs.fitbuddy" serialNumber:@"000000001"];
     
     if (pass)
     {
@@ -66,7 +70,17 @@
     }
     else
     {
-        [self.makeAPassButton setTitle:@"Add Gym Pass" forState:UIControlStateNormal];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
+        NSString *name = [defaults objectForKey:kDEFAULTS_NAME];
+        NSString *uid = [defaults objectForKey:kDEFAULTS_ID];
+        NSString *locname = [defaults objectForKey:kDEFAULTS_LOCNAME];
+        
+        [self.memberNameField setText:name];
+        [self.memberNumberField setText:uid];
+        [self.locationNameField setText:locname];
+        
+        [self.makeAPassButton setTitle:@"Show Gym Pass" forState:UIControlStateNormal];
 
     }
     
@@ -83,11 +97,24 @@
 {
     UITextField *theField = (UITextField*)sender;
     // do whatever you want with this text field
+    [self saveDefaults];
+    
     [theField resignFirstResponder];
+}
+
+- (void) saveDefaults
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:self.memberNameField.text forKey:kDEFAULTS_NAME];
+    [defaults setObject:self.memberNumberField.text forKey:kDEFAULTS_ID];
+    [defaults setObject:self.locationNameField.text forKey:kDEFAULTS_LOCNAME];
+    [defaults synchronize];
 }
 
 - (IBAction)makePassButtonClicked:(id)sender
 {
+    [self saveDefaults];
+    
     if (DEBUG) NSLog(@"Preparing Gym Pass for: Name:%@, Id:%@, Venue:%@, Addr:%@, Lat:%@, Lon:%@",
           self.memberNameField.text,
           self.memberNumberField.text,
@@ -96,7 +123,7 @@
           [NSNumber numberWithDouble: self.venue.location.coordinate.latitude],
           [NSNumber numberWithDouble: self.venue.location.coordinate.longitude]);
     
-    if (self.memberNumberField.text && self.memberNumberField.text && self.locationNameField.text)
+    if (self.memberNumberField.text.length > 0 && self.memberNumberField.text.length > 0 && self.locationNameField.text.length > 0)
     {
         
         NSString *address = @"No address";
@@ -155,7 +182,7 @@
     }
     else
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing information" message:@"You must complete the form fields to generate a pass." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No information entered" message:@"Please provide your name, ID, and location name to generate a Gym Pass." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     }
  
@@ -168,8 +195,6 @@
     {
         PKPass *pass = [[PKPass alloc] initWithData:data error:&err];
         
-        
-        
         if (err)
         {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:[err localizedDescription] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil];
@@ -177,11 +202,40 @@
         }
         else
         {
+            
             PKAddPassesViewController *pkvc = [[PKAddPassesViewController alloc] initWithPass:pass];
             
+            if (pkvc)
+            {
             [self presentViewController:pkvc
                                animated:YES
                              completion:nil                 ];
+            }
+            else
+            {
+                UIImage * generatedImage = [CodeGen genCodeWithContents:self.memberNumberField.text machineReadableCodeObjectType:RSMetadataObjectTypeExtendedCode39Code];
+                
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PassPreview" owner:self options:nil];
+                PassPreview *previewView = (PassPreview *)[nib objectAtIndex:0];
+                
+                [previewView.memberNameLabel setText:self.memberNameField.text];
+                [previewView.memberIdLabel setText:self.memberNumberField.text];
+                [previewView.barcodeCodeLabel setText:self.memberNumberField.text];
+                [previewView.barcodeImage setImage:generatedImage];
+                
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"FitBuddy Gym Pass" message:self.locationNameField.text delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
+                [alertView setBackgroundColor:kCOLOR_RED];
+                [previewView setBackgroundColor:kCOLOR_RED];
+                
+                UIView *accessoryView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 280, 250)];
+                [alertView setValue:previewView forKey:@"accessoryView"];
+                
+                [accessoryView addSubview:previewView];
+                
+                [alertView show];
+                
+            }
         }
     }
 

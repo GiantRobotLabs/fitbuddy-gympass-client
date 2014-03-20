@@ -19,6 +19,10 @@
 #define kTITLEBAR       @"titlebar"
 #define kFITBUDDY       @"fitbuddy"
 
+#define kDEFAULTS_NAME  @"gymPassMemberName"
+#define kDEFAULTS_ID    @"gymPassMemberId"
+#define kDEFAULTS_LOCNAME @"gymPassLocationName"
+
 //These values should be defined in FoursquareConstants.h
 //#define kFSCLIENTID     @"FORUSQUARE APP ID"
 //#define kFSCLIENTSECRET @"FOURSQUARE CLIENT SECRET"

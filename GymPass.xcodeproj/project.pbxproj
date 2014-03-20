@@ -19,6 +19,25 @@
 		D62CA07F18CBA11E0066CFA6 /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D62CA07418CBA11E0066CFA6 /* pin@2x.png */; };
 		D62CA08018CBA11E0066CFA6 /* poweredByFoursquare_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = D62CA07518CBA11E0066CFA6 /* poweredByFoursquare_gray.png */; };
 		D62CA08118CBA11E0066CFA6 /* poweredByFoursquare_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D62CA07618CBA11E0066CFA6 /* poweredByFoursquare_gray@2x.png */; };
+		D6344E0318DA8E1C00019D8E /* RSCode128Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DE118DA8E1C00019D8E /* RSCode128Generator.m */; };
+		D6344E0418DA8E1C00019D8E /* RSCode39Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DE318DA8E1C00019D8E /* RSCode39Generator.m */; };
+		D6344E0518DA8E1C00019D8E /* RSCode39Mod43Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DE518DA8E1C00019D8E /* RSCode39Mod43Generator.m */; };
+		D6344E0618DA8E1C00019D8E /* RSCode93Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DE718DA8E1C00019D8E /* RSCode93Generator.m */; };
+		D6344E0718DA8E1C00019D8E /* RSCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DEA18DA8E1C00019D8E /* RSCodeGenerator.m */; };
+		D6344E0818DA8E1C00019D8E /* RSCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DEC18DA8E1C00019D8E /* RSCodeView.m */; };
+		D6344E0918DA8E1C00019D8E /* RSCornersView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DEE18DA8E1C00019D8E /* RSCornersView.m */; };
+		D6344E0A18DA8E1C00019D8E /* RSEAN13Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DF018DA8E1C00019D8E /* RSEAN13Generator.m */; };
+		D6344E0B18DA8E1C00019D8E /* RSEAN8Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DF218DA8E1C00019D8E /* RSEAN8Generator.m */; };
+		D6344E0C18DA8E1C00019D8E /* RSEANGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DF418DA8E1C00019D8E /* RSEANGenerator.m */; };
+		D6344E0D18DA8E1C00019D8E /* RSExtendedCode39Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DF618DA8E1C00019D8E /* RSExtendedCode39Generator.m */; };
+		D6344E0E18DA8E1C00019D8E /* RSISBN13Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DF818DA8E1C00019D8E /* RSISBN13Generator.m */; };
+		D6344E0F18DA8E1C00019D8E /* RSISSN13Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DFA18DA8E1C00019D8E /* RSISSN13Generator.m */; };
+		D6344E1018DA8E1C00019D8E /* RSITF14Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DFC18DA8E1C00019D8E /* RSITF14Generator.m */; };
+		D6344E1118DA8E1C00019D8E /* RSScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344DFE18DA8E1C00019D8E /* RSScannerViewController.m */; };
+		D6344E1218DA8E1C00019D8E /* RSUnifiedCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344E0018DA8E1C00019D8E /* RSUnifiedCodeGenerator.m */; };
+		D6344E1318DA8E1C00019D8E /* RSUPCEGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344E0218DA8E1C00019D8E /* RSUPCEGenerator.m */; };
+		D6344E1C18DAB88500019D8E /* PassPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344E1B18DAB88500019D8E /* PassPreview.m */; };
+		D6344E1E18DAD22900019D8E /* PassPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6344E1D18DAD22900019D8E /* PassPreview.xib */; };
 		D6736B2518CED00600BA8AB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F4459E18CD65E700911D1E /* Main.storyboard */; };
 		D6BC795318CA6252000CEAFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC795218CA6252000CEAFB /* Foundation.framework */; };
 		D6BC795518CA6252000CEAFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC795418CA6252000CEAFB /* CoreGraphics.framework */; };
@@ -59,6 +78,44 @@
 		D62CA07418CBA11E0066CFA6 /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin@2x.png"; sourceTree = "<group>"; };
 		D62CA07518CBA11E0066CFA6 /* poweredByFoursquare_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poweredByFoursquare_gray.png; sourceTree = "<group>"; };
 		D62CA07618CBA11E0066CFA6 /* poweredByFoursquare_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poweredByFoursquare_gray@2x.png"; sourceTree = "<group>"; };
+		D6344DE018DA8E1C00019D8E /* RSCode128Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCode128Generator.h; sourceTree = "<group>"; };
+		D6344DE118DA8E1C00019D8E /* RSCode128Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCode128Generator.m; sourceTree = "<group>"; };
+		D6344DE218DA8E1C00019D8E /* RSCode39Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCode39Generator.h; sourceTree = "<group>"; };
+		D6344DE318DA8E1C00019D8E /* RSCode39Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCode39Generator.m; sourceTree = "<group>"; };
+		D6344DE418DA8E1C00019D8E /* RSCode39Mod43Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCode39Mod43Generator.h; sourceTree = "<group>"; };
+		D6344DE518DA8E1C00019D8E /* RSCode39Mod43Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCode39Mod43Generator.m; sourceTree = "<group>"; };
+		D6344DE618DA8E1C00019D8E /* RSCode93Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCode93Generator.h; sourceTree = "<group>"; };
+		D6344DE718DA8E1C00019D8E /* RSCode93Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCode93Generator.m; sourceTree = "<group>"; };
+		D6344DE818DA8E1C00019D8E /* RSCodeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCodeGen.h; sourceTree = "<group>"; };
+		D6344DE918DA8E1C00019D8E /* RSCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCodeGenerator.h; sourceTree = "<group>"; };
+		D6344DEA18DA8E1C00019D8E /* RSCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCodeGenerator.m; sourceTree = "<group>"; };
+		D6344DEB18DA8E1C00019D8E /* RSCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCodeView.h; sourceTree = "<group>"; };
+		D6344DEC18DA8E1C00019D8E /* RSCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCodeView.m; sourceTree = "<group>"; };
+		D6344DED18DA8E1C00019D8E /* RSCornersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCornersView.h; sourceTree = "<group>"; };
+		D6344DEE18DA8E1C00019D8E /* RSCornersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCornersView.m; sourceTree = "<group>"; };
+		D6344DEF18DA8E1C00019D8E /* RSEAN13Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSEAN13Generator.h; sourceTree = "<group>"; };
+		D6344DF018DA8E1C00019D8E /* RSEAN13Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSEAN13Generator.m; sourceTree = "<group>"; };
+		D6344DF118DA8E1C00019D8E /* RSEAN8Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSEAN8Generator.h; sourceTree = "<group>"; };
+		D6344DF218DA8E1C00019D8E /* RSEAN8Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSEAN8Generator.m; sourceTree = "<group>"; };
+		D6344DF318DA8E1C00019D8E /* RSEANGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSEANGenerator.h; sourceTree = "<group>"; };
+		D6344DF418DA8E1C00019D8E /* RSEANGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSEANGenerator.m; sourceTree = "<group>"; };
+		D6344DF518DA8E1C00019D8E /* RSExtendedCode39Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSExtendedCode39Generator.h; sourceTree = "<group>"; };
+		D6344DF618DA8E1C00019D8E /* RSExtendedCode39Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSExtendedCode39Generator.m; sourceTree = "<group>"; };
+		D6344DF718DA8E1C00019D8E /* RSISBN13Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSISBN13Generator.h; sourceTree = "<group>"; };
+		D6344DF818DA8E1C00019D8E /* RSISBN13Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSISBN13Generator.m; sourceTree = "<group>"; };
+		D6344DF918DA8E1C00019D8E /* RSISSN13Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSISSN13Generator.h; sourceTree = "<group>"; };
+		D6344DFA18DA8E1C00019D8E /* RSISSN13Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSISSN13Generator.m; sourceTree = "<group>"; };
+		D6344DFB18DA8E1C00019D8E /* RSITF14Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSITF14Generator.h; sourceTree = "<group>"; };
+		D6344DFC18DA8E1C00019D8E /* RSITF14Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSITF14Generator.m; sourceTree = "<group>"; };
+		D6344DFD18DA8E1C00019D8E /* RSScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSScannerViewController.h; sourceTree = "<group>"; };
+		D6344DFE18DA8E1C00019D8E /* RSScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSScannerViewController.m; sourceTree = "<group>"; };
+		D6344DFF18DA8E1C00019D8E /* RSUnifiedCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUnifiedCodeGenerator.h; sourceTree = "<group>"; };
+		D6344E0018DA8E1C00019D8E /* RSUnifiedCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSUnifiedCodeGenerator.m; sourceTree = "<group>"; };
+		D6344E0118DA8E1C00019D8E /* RSUPCEGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUPCEGenerator.h; sourceTree = "<group>"; };
+		D6344E0218DA8E1C00019D8E /* RSUPCEGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSUPCEGenerator.m; sourceTree = "<group>"; };
+		D6344E1A18DAB88500019D8E /* PassPreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PassPreview.h; path = "FitBuddy-GymPass/PassPreview.h"; sourceTree = SOURCE_ROOT; };
+		D6344E1B18DAB88500019D8E /* PassPreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PassPreview.m; path = "FitBuddy-GymPass/PassPreview.m"; sourceTree = SOURCE_ROOT; };
+		D6344E1D18DAD22900019D8E /* PassPreview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PassPreview.xib; path = "FitBuddy-GymPass/PassPreview.xib"; sourceTree = SOURCE_ROOT; };
 		D6BC794F18CA6252000CEAFB /* GymPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BC795218CA6252000CEAFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D6BC795418CA6252000CEAFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -139,9 +196,53 @@
 			path = Foursquare2;
 			sourceTree = "<group>";
 		};
+		D6344DDF18DA8E1C00019D8E /* RSBarcodes */ = {
+			isa = PBXGroup;
+			children = (
+				D6344DE018DA8E1C00019D8E /* RSCode128Generator.h */,
+				D6344DE118DA8E1C00019D8E /* RSCode128Generator.m */,
+				D6344DE218DA8E1C00019D8E /* RSCode39Generator.h */,
+				D6344DE318DA8E1C00019D8E /* RSCode39Generator.m */,
+				D6344DE418DA8E1C00019D8E /* RSCode39Mod43Generator.h */,
+				D6344DE518DA8E1C00019D8E /* RSCode39Mod43Generator.m */,
+				D6344DE618DA8E1C00019D8E /* RSCode93Generator.h */,
+				D6344DE718DA8E1C00019D8E /* RSCode93Generator.m */,
+				D6344DE818DA8E1C00019D8E /* RSCodeGen.h */,
+				D6344DE918DA8E1C00019D8E /* RSCodeGenerator.h */,
+				D6344DEA18DA8E1C00019D8E /* RSCodeGenerator.m */,
+				D6344DEB18DA8E1C00019D8E /* RSCodeView.h */,
+				D6344DEC18DA8E1C00019D8E /* RSCodeView.m */,
+				D6344DED18DA8E1C00019D8E /* RSCornersView.h */,
+				D6344DEE18DA8E1C00019D8E /* RSCornersView.m */,
+				D6344DEF18DA8E1C00019D8E /* RSEAN13Generator.h */,
+				D6344DF018DA8E1C00019D8E /* RSEAN13Generator.m */,
+				D6344DF118DA8E1C00019D8E /* RSEAN8Generator.h */,
+				D6344DF218DA8E1C00019D8E /* RSEAN8Generator.m */,
+				D6344DF318DA8E1C00019D8E /* RSEANGenerator.h */,
+				D6344DF418DA8E1C00019D8E /* RSEANGenerator.m */,
+				D6344DF518DA8E1C00019D8E /* RSExtendedCode39Generator.h */,
+				D6344DF618DA8E1C00019D8E /* RSExtendedCode39Generator.m */,
+				D6344DF718DA8E1C00019D8E /* RSISBN13Generator.h */,
+				D6344DF818DA8E1C00019D8E /* RSISBN13Generator.m */,
+				D6344DF918DA8E1C00019D8E /* RSISSN13Generator.h */,
+				D6344DFA18DA8E1C00019D8E /* RSISSN13Generator.m */,
+				D6344DFB18DA8E1C00019D8E /* RSITF14Generator.h */,
+				D6344DFC18DA8E1C00019D8E /* RSITF14Generator.m */,
+				D6344DFD18DA8E1C00019D8E /* RSScannerViewController.h */,
+				D6344DFE18DA8E1C00019D8E /* RSScannerViewController.m */,
+				D6344DFF18DA8E1C00019D8E /* RSUnifiedCodeGenerator.h */,
+				D6344E0018DA8E1C00019D8E /* RSUnifiedCodeGenerator.m */,
+				D6344E0118DA8E1C00019D8E /* RSUPCEGenerator.h */,
+				D6344E0218DA8E1C00019D8E /* RSUPCEGenerator.m */,
+			);
+			name = RSBarcodes;
+			path = "FitBuddy-GymPass/RSBarcodes";
+			sourceTree = SOURCE_ROOT;
+		};
 		D6BC794618CA6251000CEAFB = {
 			isa = PBXGroup;
 			children = (
+				D6344DDF18DA8E1C00019D8E /* RSBarcodes */,
 				D62CA06618CBA11E0066CFA6 /* Foursquare2 */,
 				D6BC795818CA6252000CEAFB /* FitBuddyGymPass */,
 				D6BC797718CA6252000CEAFB /* FitBuddyGymPassTests */,
@@ -188,6 +289,9 @@
 				D6F4459B18CD65D200911D1E /* NearbyVenuesViewController.h */,
 				D6F4459C18CD65D200911D1E /* NearbyVenuesViewController.m */,
 				D6F4459E18CD65E700911D1E /* Main.storyboard */,
+				D6344E1D18DAD22900019D8E /* PassPreview.xib */,
+				D6344E1A18DAB88500019D8E /* PassPreview.h */,
+				D6344E1B18DAB88500019D8E /* PassPreview.m */,
 				D6F4458518CD653F00911D1E /* Images.xcassets */,
 				D6BC795918CA6252000CEAFB /* Supporting Files */,
 			);
@@ -318,6 +422,7 @@
 				D62CA07F18CBA11E0066CFA6 /* pin@2x.png in Resources */,
 				D62CA07D18CBA11E0066CFA6 /* FSWebLogin.xib in Resources */,
 				D6F4458D18CD657C00911D1E /* InfoPlist.strings in Resources */,
+				D6344E1E18DAD22900019D8E /* PassPreview.xib in Resources */,
 				D62CA08118CBA11E0066CFA6 /* poweredByFoursquare_gray@2x.png in Resources */,
 				D62CA07E18CBA11E0066CFA6 /* pin.png in Resources */,
 				D6F4458618CD653F00911D1E /* Images.xcassets in Resources */,
@@ -343,17 +448,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				D62CA07818CBA11E0066CFA6 /* Foursquare2.m in Sources */,
+				D6344E1018DA8E1C00019D8E /* RSITF14Generator.m in Sources */,
+				D6344E0A18DA8E1C00019D8E /* RSEAN13Generator.m in Sources */,
+				D6344E0618DA8E1C00019D8E /* RSCode93Generator.m in Sources */,
+				D6344E0318DA8E1C00019D8E /* RSCode128Generator.m in Sources */,
+				D6344E1318DA8E1C00019D8E /* RSUPCEGenerator.m in Sources */,
 				D62CA07B18CBA11E0066CFA6 /* FSOperation.m in Sources */,
 				D62CA07918CBA11E0066CFA6 /* FSKeychain.m in Sources */,
 				D62CA07C18CBA11E0066CFA6 /* FSWebLogin.m in Sources */,
+				D6344E1118DA8E1C00019D8E /* RSScannerViewController.m in Sources */,
+				D6344E0C18DA8E1C00019D8E /* RSEANGenerator.m in Sources */,
+				D6344E1218DA8E1C00019D8E /* RSUnifiedCodeGenerator.m in Sources */,
 				D62CA07A18CBA11E0066CFA6 /* FSOAuthNoAppStore.m in Sources */,
+				D6344E0918DA8E1C00019D8E /* RSCornersView.m in Sources */,
+				D6344E0E18DA8E1C00019D8E /* RSISBN13Generator.m in Sources */,
 				D6F4459118CD65A600911D1E /* AppDelegate.m in Sources */,
 				D6F4459718CD65BC00911D1E /* FSVenue.m in Sources */,
+				D6344E1C18DAB88500019D8E /* PassPreview.m in Sources */,
 				D6F4458018CD64F100911D1E /* main.m in Sources */,
+				D6344E0418DA8E1C00019D8E /* RSCode39Generator.m in Sources */,
 				D6F4459D18CD65D200911D1E /* NearbyVenuesViewController.m in Sources */,
+				D6344E0818DA8E1C00019D8E /* RSCodeView.m in Sources */,
+				D6344E0B18DA8E1C00019D8E /* RSEAN8Generator.m in Sources */,
+				D6344E0718DA8E1C00019D8E /* RSCodeGenerator.m in Sources */,
+				D6344E0D18DA8E1C00019D8E /* RSExtendedCode39Generator.m in Sources */,
 				D6F4458818CD656B00911D1E /* FitBuddyGymPassTests.m in Sources */,
 				D6F4459A18CD65C800911D1E /* GymPassViewController.m in Sources */,
+				D6344E0518DA8E1C00019D8E /* RSCode39Mod43Generator.m in Sources */,
 				D6F4459618CD65BC00911D1E /* FSConverter.m in Sources */,
+				D6344E0F18DA8E1C00019D8E /* RSISSN13Generator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
