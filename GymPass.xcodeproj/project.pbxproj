@@ -38,7 +38,6 @@
 		D6344E1318DA8E1C00019D8E /* RSUPCEGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344E0218DA8E1C00019D8E /* RSUPCEGenerator.m */; };
 		D6344E1C18DAB88500019D8E /* PassPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = D6344E1B18DAB88500019D8E /* PassPreview.m */; };
 		D6344E1E18DAD22900019D8E /* PassPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6344E1D18DAD22900019D8E /* PassPreview.xib */; };
-		D6736B2518CED00600BA8AB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F4459E18CD65E700911D1E /* Main.storyboard */; };
 		D6BC795318CA6252000CEAFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC795218CA6252000CEAFB /* Foundation.framework */; };
 		D6BC795518CA6252000CEAFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC795418CA6252000CEAFB /* CoreGraphics.framework */; };
 		D6BC795718CA6252000CEAFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC795618CA6252000CEAFB /* UIKit.framework */; };
@@ -46,10 +45,12 @@
 		D6BC797318CA6252000CEAFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC795218CA6252000CEAFB /* Foundation.framework */; };
 		D6BC797418CA6252000CEAFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC795618CA6252000CEAFB /* UIKit.framework */; };
 		D6BC798818CA6311000CEAFB /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC798718CA6311000CEAFB /* PassKit.framework */; };
+		D6C49F4E1901E6F8001A8E41 /* ShowPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C49F4D1901E6F8001A8E41 /* ShowPassViewController.m */; };
+		D6C49F8B19020D44001A8E41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F4459E18CD65E700911D1E /* Main.storyboard */; };
 		D6F4457E18CD64D600911D1E /* FitBuddyGymPass.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D6F4457D18CD64D600911D1E /* FitBuddyGymPass.entitlements */; };
 		D6F4458018CD64F100911D1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F4457F18CD64F100911D1E /* main.m */; };
 		D6F4458418CD652C00911D1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6F4458218CD652C00911D1E /* InfoPlist.strings */; };
-		D6F4458618CD653F00911D1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F4458518CD653F00911D1E /* Images.xcassets */; };
+		D6F4458618CD653F00911D1E /* GymPass.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F4458518CD653F00911D1E /* GymPass.xcassets */; };
 		D6F4458818CD656B00911D1E /* FitBuddyGymPassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F4458718CD656B00911D1E /* FitBuddyGymPassTests.m */; };
 		D6F4458A18CD657600911D1E /* FitBuddyGymPassTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6F4458918CD657600911D1E /* FitBuddyGymPassTests-Info.plist */; };
 		D6F4458D18CD657C00911D1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6F4458B18CD657C00911D1E /* InfoPlist.strings */; };
@@ -123,12 +124,14 @@
 		D6BC797018CA6252000CEAFB /* FitBuddy Gym PassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FitBuddy Gym PassTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BC797118CA6252000CEAFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D6BC798718CA6311000CEAFB /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		D6C49F4C1901E6F8001A8E41 /* ShowPassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowPassViewController.h; path = "FitBuddy-GymPass/ShowPassViewController.h"; sourceTree = SOURCE_ROOT; };
+		D6C49F4D1901E6F8001A8E41 /* ShowPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowPassViewController.m; path = "FitBuddy-GymPass/ShowPassViewController.m"; sourceTree = SOURCE_ROOT; };
 		D6F4457B18CD64A900911D1E /* FitBuddyGymPass-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "FitBuddyGymPass-Info.plist"; path = "FitBuddy-GymPass/FitBuddyGymPass-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D6F4457D18CD64D600911D1E /* FitBuddyGymPass.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = FitBuddyGymPass.entitlements; path = "FitBuddy-GymPass/FitBuddyGymPass.entitlements"; sourceTree = SOURCE_ROOT; };
 		D6F4457F18CD64F100911D1E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "FitBuddy-GymPass/main.m"; sourceTree = SOURCE_ROOT; };
 		D6F4458118CD64FC00911D1E /* FitBuddyGymPass-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FitBuddyGymPass-Prefix.pch"; path = "FitBuddy-GymPass/FitBuddyGymPass-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		D6F4458318CD652C00911D1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "FitBuddy-GymPass/en.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
-		D6F4458518CD653F00911D1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "FitBuddy-GymPass/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		D6F4458518CD653F00911D1E /* GymPass.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = GymPass.xcassets; path = "FitBuddy-GymPass/GymPass.xcassets"; sourceTree = SOURCE_ROOT; };
 		D6F4458718CD656B00911D1E /* FitBuddyGymPassTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FitBuddyGymPassTests.m; path = "FitBuddy-GymPassTests/FitBuddyGymPassTests.m"; sourceTree = SOURCE_ROOT; };
 		D6F4458918CD657600911D1E /* FitBuddyGymPassTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "FitBuddyGymPassTests-Info.plist"; path = "FitBuddy-GymPassTests/FitBuddyGymPassTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D6F4458C18CD657C00911D1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "FitBuddy-GymPassTests/en.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
@@ -292,7 +295,9 @@
 				D6344E1D18DAD22900019D8E /* PassPreview.xib */,
 				D6344E1A18DAB88500019D8E /* PassPreview.h */,
 				D6344E1B18DAB88500019D8E /* PassPreview.m */,
-				D6F4458518CD653F00911D1E /* Images.xcassets */,
+				D6F4458518CD653F00911D1E /* GymPass.xcassets */,
+				D6C49F4C1901E6F8001A8E41 /* ShowPassViewController.h */,
+				D6C49F4D1901E6F8001A8E41 /* ShowPassViewController.m */,
 				D6BC795918CA6252000CEAFB /* Supporting Files */,
 			);
 			name = FitBuddyGymPass;
@@ -417,7 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6736B2518CED00600BA8AB6 /* Main.storyboard in Resources */,
+				D6C49F8B19020D44001A8E41 /* Main.storyboard in Resources */,
 				D6F4458A18CD657600911D1E /* FitBuddyGymPassTests-Info.plist in Resources */,
 				D62CA07F18CBA11E0066CFA6 /* pin@2x.png in Resources */,
 				D62CA07D18CBA11E0066CFA6 /* FSWebLogin.xib in Resources */,
@@ -425,7 +430,7 @@
 				D6344E1E18DAD22900019D8E /* PassPreview.xib in Resources */,
 				D62CA08118CBA11E0066CFA6 /* poweredByFoursquare_gray@2x.png in Resources */,
 				D62CA07E18CBA11E0066CFA6 /* pin.png in Resources */,
-				D6F4458618CD653F00911D1E /* Images.xcassets in Resources */,
+				D6F4458618CD653F00911D1E /* GymPass.xcassets in Resources */,
 				D6F4457E18CD64D600911D1E /* FitBuddyGymPass.entitlements in Resources */,
 				D62CA07718CBA11E0066CFA6 /* CHANGELOG.md in Resources */,
 				D6F4458418CD652C00911D1E /* InfoPlist.strings in Resources */,
@@ -455,6 +460,7 @@
 				D6344E1318DA8E1C00019D8E /* RSUPCEGenerator.m in Sources */,
 				D62CA07B18CBA11E0066CFA6 /* FSOperation.m in Sources */,
 				D62CA07918CBA11E0066CFA6 /* FSKeychain.m in Sources */,
+				D6C49F4E1901E6F8001A8E41 /* ShowPassViewController.m in Sources */,
 				D62CA07C18CBA11E0066CFA6 /* FSWebLogin.m in Sources */,
 				D6344E1118DA8E1C00019D8E /* RSScannerViewController.m in Sources */,
 				D6344E0C18DA8E1C00019D8E /* RSEANGenerator.m in Sources */,
@@ -603,7 +609,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FitBuddy-GymPass/FitBuddyGymPass-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/FitBuddy-GymPass/FitBuddyGymPass-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -622,7 +630,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FitBuddy-GymPass/FitBuddyGymPass-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/FitBuddy-GymPass/FitBuddyGymPass-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

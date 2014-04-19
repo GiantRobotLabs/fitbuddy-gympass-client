@@ -186,6 +186,11 @@
 -(void) locationSelected
 {
     [self.parent setValue:self.selected forKey:@"venue"];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:self.selected.name forKey:kDEFAULTS_LOCNAME];
+    [defaults synchronize];
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

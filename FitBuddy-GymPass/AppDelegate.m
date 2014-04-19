@@ -10,7 +10,7 @@
 #import "Constants.h"
 #import "FoursquareConstants.h"
 #import "Foursquare2.h"
-
+#import "GymPassViewController.h"
 @interface AppDelegate ()
 {
     UIActivityIndicatorView *activityIndicatorView;
@@ -68,6 +68,13 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    if (self.gymPassViewController)
+    {
+        [self.gymPassViewController showPass:YES];
+        
+    }
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
